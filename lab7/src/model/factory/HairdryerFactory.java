@@ -1,0 +1,19 @@
+package model.factory;
+
+import model.Appliances;
+import model.Hairdryer;
+
+/**
+ * This factory create Hairdryer
+ * 
+ * @author Andrei Grishkin
+ * @version 1.1
+ */
+public class HairdryerFactory implements Factory{
+
+	@Override
+	public Appliances createAppliances(String name, double powerWt, boolean socket) {
+		return new Hairdryer("Hairdryer", 2.1, 80.0);
+	}
+
+}

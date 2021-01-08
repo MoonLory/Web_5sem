@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller">
+   <children>
+      <AnchorPane layoutX="-9.0" layoutY="-218.0" prefHeight="500.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <SplitPane dividerPositions="0.5016722408026756" prefHeight="500.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="498.0" prefWidth="347.0">
+                     <children>
+                        <TableView fx:id="tableView" layoutX="4.0" prefHeight="498.0" prefWidth="395.0">
+                          <columns>
+                            <TableColumn fx:id="nameColumn" prefWidth="112.0" text="Name" />
+                            <TableColumn fx:id="powerColumn" prefWidth="72.0" text="Power" />
+                              <TableColumn fx:id="selectedColumn" prefWidth="67.20001220703125" text="Selected" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="498.0" prefWidth="241.0">
+                     <children>
+                         <Label layoutX="14.0" layoutY="36.0" text="min power" />
+                        <Button fx:id="selectPowerbutton" layoutX="234.0" layoutY="42.0" mnemonicParsing="false" onAction="#onSelectByPowerTapped" prefHeight="26.0" prefWidth="52.0" text="select" AnchorPane.leftAnchor="270.0" />
+                        <TextField fx:id="minPowertextField" layoutX="85.0" layoutY="32.0" />
+                        <TextField fx:id="maxPowertextField" layoutX="85.0" layoutY="58.0" />
+                        <Label layoutX="14.0" layoutY="62.0" text="max pover" />
+                        <Label layoutX="14.0" layoutY="103.0" text="selcted" />
+                        <Button fx:id="selectSelectedButton" layoutX="234.0" layoutY="99.0" mnemonicParsing="false" onAction="#onSelectBySelectedTapped" prefHeight="26.0" prefWidth="52.0" text="select" AnchorPane.leftAnchor="234.0" />
+                        <ChoiceBox fx:id="selectedStatusBox" layoutX="84.0" layoutY="99.0" prefWidth="150.0" />
+                        <ChoiceBox fx:id="factoryBox" layoutX="14.0" layoutY="217.0" prefWidth="150.0" />
+                        <Button fx:id="produceButton" layoutX="165.0" layoutY="217.0" mnemonicParsing="false" onAction="#onProduceTapped" prefHeight="26.0" prefWidth="68.0" text="produce" AnchorPane.leftAnchor="165.0" />
+                        <Button fx:id="resetButton" layoutX="118.0" layoutY="162.0" mnemonicParsing="false" onAction="#onResetButtonTapped" text="reset" />
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

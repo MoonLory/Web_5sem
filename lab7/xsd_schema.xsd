@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<xs:schema
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.bsu.by"
+        xmlns="http://www.bsu.by"
+        elementFormDefault="qualified">
+
+    <xs:complexType name="Appliances" abstract="true">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="powerWt" type="xs:double"/>
+            <xs:element name="socket" type="xs:boolean"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Bake">
+        <xs:complexContent>
+            <xs:extension base="Appliances">
+                <xs:sequence>
+
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="Conditioner">
+        <xs:complexContent>
+            <xs:extension base="Appliances">
+                <xs:sequence>
+
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="Dishwasher">
+        <xs:complexContent>
+            <xs:extension base="Appliances">
+                <xs:sequence>
+
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="Fridge">
+        <xs:complexContent>
+            <xs:extension base="Appliances">
+                <xs:sequence>
+
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="Hairdryer">
+        <xs:complexContent>
+            <xs:extension base="Appliances">
+                <xs:sequence>
+
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="VacuumCleaner">
+        <xs:complexContent>
+            <xs:extension base="Appliances">
+                <xs:sequence>
+
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:element name="AppliancesList">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:choice maxOccurs="unbounded" minOccurs="0">
+                	<xs:element name="bake" type="Bake"/>
+                    <xs:element name="fridge" type="Fridge"/>
+                    <xs:element name="conditioner" type="Conditioner"/>
+                    <xs:element name="dishwasher" type="Dishwasher"/>
+                    <xs:element name="hairdryer" type="Hairdryer"/>
+                    <xs:element name="vacuumcleaner" type="VacuumCleaner"/>
+                </xs:choice>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

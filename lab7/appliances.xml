@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AppliancesList
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.bsu.by"
+        xsi:schemaLocation="http://www.bsu.by xsd_schema.xsd">
+
+    <bake>
+        <name>Bake</name>
+        <powerWt>10.8</powerWt>
+        <socket>false</socket>
+  </bake>
+
+    <fridge>
+        <name>Fridge</name>
+        <powerWt>20.0</powerWt>
+        <socket>false</socket>
+    </fridge>
+
+    <conditioner>
+        <name>Dishwasher</name>
+        <powerWt>5.6</powerWt>
+        <socket>false</socket>
+    </conditioner>
+
+    <dishwasher>
+        <name>Hairdryer</name>
+        <powerWt>1.0</powerWt>
+        <socket>false</socket>
+   </dishwasher>
+
+    <hairdryer>
+        <name>Conditioner</name>
+        <powerWt>1.0</powerWt>
+        <socket>false</socket>
+   </hairdryer>
+
+    <vacuumcleaner>
+        <name>VacuumCleaner</name>
+        <powerWt>64.0</powerWt>
+        <socket>false</socket>
+   </vacuumcleaner>
+
+</AppliancesList>
